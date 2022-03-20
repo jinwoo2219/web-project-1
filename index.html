@@ -10,13 +10,31 @@
         <li><a href="1.html">Html</a></li>
         <li><a href="2.html">JavaScript</a></li>
     </ul>
-    <input type="button" value="밝게" onclick="
-    document.querySelector('body').style.backgroundColor='white';
-    document.querySelector('body').style.color='black';
-    ">
-    <input type="button" value="어둡게" onclick="
-    document.querySelector('body').style.backgroundColor='black';
-    document.querySelector('body').style.color='white';
+    <input  type="button" value="어둡게" onclick="
+    var target=document.querySelector('body');
+    if(this.value==='어둡게'){
+        target.style.backgroundColor='black';
+        target.style.color='white';
+        this.value='밝게';
+        var i=0;
+        var aArr=docoment.querySelectorAll('a');
+        while(i<aArr.length){
+            aArr[i].style.color=powderblue;
+            i=i+1;
+        }
+    }
+    else{
+        var target=document.querySelector('body');
+        target.style.backgroundColor='white';
+        target.style.color='black';
+        this.value='어둡게';
+        var i=0;
+        var aArr=docoment.querySelectorAll('a');
+        while(i<aArr.length){
+            aArr[i].style.color='blue';
+            i=i+1;
+        }
+    }
     ">
     <input type="text">
 
